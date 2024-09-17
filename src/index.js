@@ -33,14 +33,6 @@ function highlightDot() {
   });
 }
 
-navRight.addEventListener('click', () => {
-  slideRight();
-});
-
-navLeft.addEventListener('click', () => {
-  slideLeft();
-});
-
 function setPosition(index) {
   slides.setAttribute('index', index);
   const newPosition = slideWidth * index;
@@ -75,6 +67,14 @@ function slideLeft() {
   }
   highlightDot();
 }
+
+navRight.addEventListener('click', () => {
+  slideRight();
+});
+
+navLeft.addEventListener('click', () => {
+  slideLeft();
+});
 
 makeDots();
 highlightDot();
