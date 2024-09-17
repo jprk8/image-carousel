@@ -35,12 +35,10 @@ function highlightDot() {
 
 navRight.addEventListener('click', () => {
   slideRight();
-  highlightDot();
 });
 
 navLeft.addEventListener('click', () => {
   slideLeft();
-  highlightDot();
 });
 
 function setPosition(index) {
@@ -60,6 +58,7 @@ function slideRight() {
     slides.setAttribute('index', 0);
     slides.style.right = 0;
   }
+  highlightDot();
 }
 
 function slideLeft() {
@@ -74,7 +73,10 @@ function slideLeft() {
     const newPosition = slideWidth * lastIndex;
     slides.style.right = `${newPosition}px`;
   }
+  highlightDot();
 }
 
 makeDots();
 highlightDot();
+
+setInterval(slideRight, 5000);
