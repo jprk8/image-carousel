@@ -1,3 +1,73 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
 body {
-  background-color: black;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(0, 78, 122);
+  display: grid;
+  place-items: center;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.carousel {
+  --frame-width: 480px;
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, min-content);
+  gap: 12px;
+}
+
+.slides {
+  display: flex;
+  width: var(--frame-width);
+  height: auto;
+  position: absolute;
+  right: 0;
+}
+
+.carousel-frame {
+  box-sizing: content-box;
+  width: var(--frame-width);
+  height: 400px;
+  border: 10px solid orange;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.nav-dots {
+  grid-column: 1 / 4;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
 }
