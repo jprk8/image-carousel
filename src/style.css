@@ -48,7 +48,7 @@ select {
 
 .slides {
   display: flex;
-  width: var(--frame-width);
+  width: 100%;
   height: auto;
   position: absolute;
   right: 0;
